@@ -16,18 +16,18 @@ Plugin.create :mikuttre_yometab do
   }
 
   yometab_name = UserConfig[:yometab_name]
-  if yometab_name == '' then yometab_name = "yome" end
+  if yometab_name == nil then yometab_name = "yome" end
   yome_url = UserConfig[:yometab_url]
   yome_x = UserConfig[:yometab_x]
-  if yome_x == '' then yome_x = "100" end
+  if yome_x == nil then yome_x = "100" end
   yome_y = UserConfig[:yometab_y]
-  if yome_y == '' then yome_y = "100" end
+  if yome_y == nil then yome_y = "100" end
   
   tab(:mikutter_yometab, "#{yometab_table[yometab_name]}タブ") do
     icon = File.expand_path(File.join(File.dirname(__FILE__), "#{yometab_name}.png"))
     set_icon icon
     expand
-    if yome_url != "" then
+    if yome_url != nil then
       picture = Gtk::WebIcon.new(yome_url, yome_x.to_i, yome_y.to_i)
       nativewidget Gtk::HBox.new(false, 0).closeup(picture)
     end
