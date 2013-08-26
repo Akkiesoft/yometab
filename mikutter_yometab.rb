@@ -19,9 +19,9 @@ Plugin.create :mikuttre_yometab do
   if yometab_name == nil then yometab_name = "yome" end
   yome_url = UserConfig[:yometab_url]
   yome_x = UserConfig[:yometab_x]
-  if yome_x == nil then yome_x = "100" end
+  if yome_x.to_i == 0 then yome_x = "100" end
   yome_y = UserConfig[:yometab_y]
-  if yome_y == nil then yome_y = "100" end
+  if yome_y.to_i == 0 then yome_y = "100" end
   
   tab(:mikutter_yometab, "#{yometab_table[yometab_name]}タブ") do
     icon = File.expand_path(File.join(File.dirname(__FILE__), "#{yometab_name}.png"))
@@ -38,5 +38,10 @@ Plugin.create :mikuttre_yometab do
     input '画像Xサイズ', :yometab_x
     input '画像Yサイズ', :yometab_y
     select 'タブ名', :yometab_name, yometab_table
+    closeup apply = ::Gtk::Button.new('適用')
+    apply.signal_connect("clicked") {
+      # ここに処理が入る
+      Gtk::Dialog.Alert("test")
+    }
   end
 end
