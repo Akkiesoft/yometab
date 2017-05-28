@@ -7,22 +7,19 @@
 Plugin.create :yometab do
 
   yometab_table = {
-    	'yome'		=> '嫁',
-	   	'tsuma'		=> '妻',
-    	'musume'	=> '娘',
-    	'imouto'	=> '妹',
-    	'kanojo'	=> '彼女',
-    	'jis'		=> '〄'
+    'yome'		=> '嫁',
+    'tsuma'		=> '妻',
+    'musume'	=> '娘',
+    'imouto'	=> '妹',
+    'kanojo'	=> '彼女',
+    'jis'		=> '〄'
   }
 
-  yometab_name = UserConfig[:yometab_name]
-  if yometab_name == nil then yometab_name = "yome" end
+  yometab_name = UserConfig[:yometab_name] || "yome"
   yome_url = UserConfig[:yometab_url]
-  yome_x = UserConfig[:yometab_x]
-  if yome_x == nil then yome_x = "100" end
-  yome_y = UserConfig[:yometab_y]
-  if yome_y == nil then yome_y = "100" end
-  
+  yome_x = UserConfig[:yometab_x] || "100"
+  yome_y = UserConfig[:yometab_y] || "100"
+
   tab(:mikutter_yometab, "#{yometab_table[yometab_name]}タブ") do
     icon = File.expand_path(File.join(File.dirname(__FILE__), "#{yometab_name}.png"))
     set_icon icon
@@ -34,7 +31,7 @@ Plugin.create :yometab do
   end
 
   settings "嫁タブ" do
-    input '画像URL', :yometab_url
+    fileselect '画像URL', :yometab_url
     input '画像Xサイズ', :yometab_x
     input '画像Yサイズ', :yometab_y
     select 'タブ名', :yometab_name, yometab_table
