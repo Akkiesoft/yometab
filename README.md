@@ -1,4 +1,4 @@
-mikutter_yometab
+yometab
 =====================
 
 なにこれ
@@ -8,6 +8,9 @@ mikutterに嫁を表示するタブを追加するプラグインです。新規
 つかいかた
 ---
 1. プラグインをインストールします
+````
+mkdir ~/.mikutter/plugin ; git clone https://github.com/Akkiesoft/yometab ~/.mikutter/plugin/yometab
+````
 2. 画像URLとサイズなどを設定して、mikutterを再起動します。
 3. 嫁タブでさわやかておくれライフ
 

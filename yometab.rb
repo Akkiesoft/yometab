@@ -1,10 +1,10 @@
 # -*- coding:utf-8 -*-
 ################################################################################
 ##  mikutter_yome
-##    https://github.com/Akkiesoft/mikutter_yome
+##    https://github.com/Akkiesoft/yometab
 ##
 
-Plugin.create :mikuttre_yometab do
+Plugin.create :yometab do
 
   yometab_table = {
     	'yome'		=> '嫁',
