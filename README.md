@@ -17,9 +17,9 @@ mkdir ~/.mikutter/plugin ; git clone https://github.com/Akkiesoft/yometab ~/.mik
 TODO
 ---
 + 画像サイズを自動的に調整できるようにしたい（やり方は知らない）
-+ 設定をリアルタイムに反映させる
 
 済
 + ☑画像URLを設定で変えられるようにする
 + ☑設定で妹タブとかに変わるようにする(Request by @brsywe)
++ ☑設定をリアルタイムに反映させる
 
