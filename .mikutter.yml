@@ -1,11 +1,11 @@
 ---
 slug: :yometab
 depends:
-  mikutter: 0.2.2.1297
+  mikutter: 5.0.0
   plugin:
-  - gtk
+  - gtk3
   - gui
-version: '0.2'
+version: '0.3'
 author: Akkiesoft
 name: yometab
 description: 嫁を表示できるプラグイン
