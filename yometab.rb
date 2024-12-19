@@ -26,7 +26,7 @@ Plugin.create :yometab do
     expand
     if yome_url != nil then
       picture = Gtk::WebIcon.new(yome_url, yome_x.to_i, yome_y.to_i)
-      nativewidget Gtk::HBox.new(false, 0).closeup(picture)
+      nativewidget Gtk::Box.new(:horizontal, 0).pack_start(picture, expand: false)
     end
   end
 
